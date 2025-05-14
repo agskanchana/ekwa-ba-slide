@@ -12,6 +12,17 @@ if (!defined('ABSPATH')) {
     exit;
 }
 
+require 'includes/plugin-update-checker/plugin-update-checker.php';
+use YahnisElsts\PluginUpdateChecker\v5\PucFactory;
+
+$myUpdateChecker = PucFactory::buildUpdateChecker(
+	'https://github.com/agskanchana/ekwa-ba-slide/',
+	__FILE__,
+	'ekwa-ba-slide'
+);
+
+
+
 // Define plugin constants
 define('EKWA_BA_SLIDE_VERSION', '1.0.0');
 define('EKWA_BA_SLIDE_PATH', plugin_dir_path(__FILE__));
