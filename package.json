@@ -1,0 +1,31 @@
+{
+  "name": "ekwa-ba-slide",
+  "version": "1.0.0",
+  "description": "A premium before-after comparison slider with Gutenberg block",
+  "main": "build/block.js",
+  "scripts": {
+    "build": "wp-scripts build",
+    "start": "wp-scripts start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+"
+  },
+  "keywords": [
+    "wordpress",
+    "block",
+    "before-after",
+    "slider",
+    "comparison",
+    "gutenberg"
+  ],
+  "author": "EKWA",
+  "license": "GPL-2.0-or-later",
+  "devDependencies": {
+    "@wordpress/scripts": "^26.13.0",
+    "@wordpress/block-editor": "^12.3.0",
+    "@wordpress/blocks": "^12.12.0",
+    "@wordpress/components": "^25.1.0",
+    "@wordpress/i18n": "^4.35.0"
+  }
+}

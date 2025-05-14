@@ -1,0 +1,39 @@
+{
+    "apiVersion": 2,
+    "name": "ekwa/ba-slider",
+    "title": "EKWA Before-After Slider",
+    "category": "media",
+    "icon": "image-flip-horizontal",
+    "description": "Add a premium before-after image comparison slider to your content.",
+    "textdomain": "ekwa-ba-slide",
+    "attributes": {
+        "beforeImage": {
+            "type": "object",
+            "default": {}
+        },
+        "afterImage": {
+            "type": "object",
+            "default": {}
+        },
+        "beforeLabel": {
+            "type": "string",
+            "default": "BEFORE"
+        },
+        "afterLabel": {
+            "type": "string",
+            "default": "AFTER"
+        },
+        "initialPosition": {
+            "type": "number",
+            "default": 50
+        }
+    },
+    "supports": {
+        "html": false,
+        "align": ["wide", "full"]
+    },
+    "editorScript": "file:./build/block.js",
+    "editorStyle": "file:./assets/css/editor.css",
+    "script": "file:./assets/js/ekwa-slider.js",
+    "style": "file:./assets/css/ekwa-slider.css"
+}
