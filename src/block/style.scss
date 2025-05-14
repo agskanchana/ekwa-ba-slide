@@ -127,3 +127,117 @@
         }
     }
 }
+
+/* Fix for editor preview */
+.ekwa-static-preview {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+
+    .ekwa-container {
+        position: relative;
+        width: 100%;
+        height: 350px;
+        overflow: hidden !important;
+    }
+
+    .ekwa-before-wrapper,
+    .ekwa-after-wrapper {
+        overflow: hidden !important;
+    }
+
+    /* Ensure vertical lines don't break layout */
+    .ekwa-handle:before,
+    .ekwa-handle:after,
+    .ekwa-handle > div {
+        height: 175px !important;
+        max-height: 50% !important;
+    }
+}
+
+/* Make editor preview container have proper height */
+.wp-block-ekwa-ba-slider .ekwa-preview-container {
+    min-height: 350px;
+}
+
+/* Add responsive styling */
+@media (max-width: 768px) {
+    .ekwa-static-preview .ekwa-container {
+        height: 300px;
+    }
+
+    .wp-block-ekwa-ba-slider .ekwa-preview-container {
+        min-height: 300px;
+    }
+
+    .ekwa-handle:before,
+    .ekwa-handle:after,
+    .ekwa-handle > div {
+        height: 150px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .ekwa-static-preview .ekwa-container {
+        height: 250px;
+    }
+
+    .wp-block-ekwa-ba-slider .ekwa-preview-container {
+        min-height: 250px;
+    }
+
+    .ekwa-handle:before,
+    .ekwa-handle:after,
+    .ekwa-handle > div {
+        height: 125px !important;
+    }
+}
+
+/* Enhanced static preview styles */
+.ekwa-static-preview {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+
+    .ekwa-container {
+        position: relative;
+        width: 100%;
+        height: 350px;
+        overflow: hidden;
+        border-radius: 5px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        margin: 0 auto;
+    }
+
+    /* Handle adjustments for editor */
+    .ekwa-handle {
+        cursor: default !important;
+    }
+
+    /* Prevent overflow issues */
+    .ekwa-before-wrapper,
+    .ekwa-after-wrapper {
+        overflow: hidden;
+        border-radius: 5px;
+    }
+}
+
+/* Custom styles for editor */
+.wp-block-ekwa-ba-slider {
+    .ekwa-preview-container {
+        margin-bottom: 20px;
+    }
+}
+
+/* Responsive height adjustments for editor preview */
+@media (max-width: 768px) {
+    .ekwa-static-preview .ekwa-container {
+        height: 250px;
+    }
+}
+
+@media (max-width: 480px) {
+    .ekwa-static-preview .ekwa-container {
+        height: 200px;
+    }
+}
